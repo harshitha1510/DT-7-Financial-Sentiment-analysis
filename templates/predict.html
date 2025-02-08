@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FinSentiment - Home</title>
+    <title>Predict Sentiment</title>
     <style>
         * {
             margin: 0;
@@ -21,14 +21,23 @@
         .container {
             text-align: center;
             color: white;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border-radius: 10px;
+            width: 400px;
         }
         h1 {
-            font-size: 3rem;
+            font-size: 2rem;
             margin-bottom: 1rem;
         }
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 1rem;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            resize: none;
         }
         .btn {
             padding: 1rem 2rem;
@@ -39,18 +48,30 @@
             color: white;
             cursor: pointer;
             transition: 0.3s;
+            margin-top: 1rem;
         }
         .btn:hover {
             transform: scale(1.1);
             box-shadow: 0 0 20px rgba(255, 65, 108, 0.5);
         }
+        .result {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            color: #00ff99;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Financial Sentiment Analysis</h1>
-        <p>Analyze the sentiment of financial text with AI</p>
-        <button class="btn" onclick="window.location.href='/predict'">Predict Sentiment</button>
+        <h1>Predict Sentiment</h1>
+        <form action="/predict" method="post">
+            <textarea name="message" placeholder="Enter your message..." required></textarea>
+            <br>
+            <button class="btn" type="submit">Know Sentiment</button>
+        </form>
+        {% if sentiment %}
+        <p class="result">Sentiment: {{ sentiment }}</p>
+        {% endif %}
     </div>
 </body>
 </html>
