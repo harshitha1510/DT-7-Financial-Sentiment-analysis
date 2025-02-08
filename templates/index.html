@@ -160,7 +160,7 @@
     <div class="container">
         <h1>Financial Sentiment Analysis</h1>
         <p class="subtitle">Decoding Market Emotions Through Advanced Analysis</p>
-        <button class="analyze-btn" onclick="startAnalysis()">Analyze Market Sentiment</button>
+        <a href="/predict" class="analyze-btn">Analyze Market Sentiment</a>
     </div>
 
     <script>
@@ -198,6 +198,12 @@
             document.querySelector('.background').style.transform = 
                 `translate(-${x * 30}px, -${y * 30}px)`;
         });
+    </script>
+    <script>
+        function predictSentiment() {
+            alert("Redirecting to Sentiment Prediction...");
+            window.location.href = "/predict";
+        }
     </script>
 </body>
 </html>
