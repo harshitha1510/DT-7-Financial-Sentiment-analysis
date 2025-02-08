@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Sentiment Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #141e30, #243b55);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .title {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .predict-btn {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            background-color: #ff9800;
+            color: white;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .predict-btn:hover {
+            transform: scale(1.1);
+            background-color: #e68900;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Financial Sentiment Analysis</h1>
+        <p class="subtitle">Analyze financial news & market trends with AI-powered sentiment detection.</p>
+        <button class="predict-btn" onclick="predictSentiment()">Predict Sentiment</button>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            anime({
+                targets: '.title',
+                translateY: [-50, 0],
+                opacity: [0, 1],
+                duration: 2000,
+                easing: 'easeOutBounce'
+            });
+            anime({
+                targets: '.subtitle',
+                translateX: [-100, 0],
+                opacity: [0, 1],
+                duration: 2000,
+                delay: 500,
+                easing: 'easeOutExpo'
+            });
+            anime({
+                targets: '.predict-btn',
+                scale: [0, 1],
+                duration: 2000,
+                delay: 1000,
+                easing: 'easeOutElastic'
+            });
+        });
+    </script>
+</body>
+</html>
