@@ -3,6 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ SAI-YASHWANTH
+    <title>Financial Sentiment Analysis</title>
+    <style>
+        /* General body styling */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Live background animation */
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Centering the title and button */
+        .container {
+
     <title>FinSentiment - Financial Mood Analysis</title>
     <style>
         * {
@@ -38,10 +66,54 @@
             z-index: 1;
             color: white;
             text-align: center;
+ main
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+ SAI-YASHWANTH
+            height: 100vh;
+        }
+
+        /* Title styling */
+        h1 {
+            color: #333;
+            font-size: 3rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Predict button styling */
+        .predict-btn {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            animation: slideUp 1.5s ease-in-out;
+        }
+
+        .predict-btn:hover {
+            background-color: #0056b3;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+
             min-height: 100vh;
             width: 100%;
             padding: 2rem;
@@ -144,10 +216,21 @@
         @keyframes float {
             0% { transform: translateY(100vh) rotate(0deg); }
             100% { transform: translateY(-100vh) rotate(360deg); }
+ main
         }
     </style>
 </head>
 <body>
+ SAI-YASHWANTH
+    <div class="container">
+        <h1>Financial Sentiment Analysis</h1>
+        <button class="predict-btn" onclick="redirectToPredict()">Predict</button>
+    </div>
+
+    <script>
+        function redirectToPredict() {
+            window.location.href = window.location.origin + "/predict";
+
     <div class="background"></div>
     <div class="floating-elements">
         <!-- Add financial-related floating elements -->
@@ -203,6 +286,7 @@
         function predictSentiment() {
             alert("Redirecting to Sentiment Prediction...");
             window.location.href = "/predict";
+ main
         }
     </script>
 </body>

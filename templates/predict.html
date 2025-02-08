@@ -4,6 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Predict Sentiment</title>
+ SAI-YASHWANTH
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(112, 35, 127);
+            color: rgb(255, 255, 255);
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0,0,0,0.8) 10%, rgba(40,40,40,0.6) 50%, black 90%);
+            animation: animateBg 10s infinite alternate;
+        }
+        @keyframes animateBg {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+        .container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        textarea {
+            width: 300px;
+            height: 100px;
+            background: #222;
+            color: white;
+            border: 1px solid #555;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #ff5722;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #e64a19;
+
     <!-- Link to Google Fonts for 'Poppins' -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -141,16 +199,26 @@
                 font-size: 1rem;
                 padding: 10px 20px;
             }
+> main
         }
     </style>
 </head>
 <body>
+ SAI-YASHWANTH
+    <div class="background"></div>
+    <div class="container">
+        <h1>Sentiment Analysis</h1>
+        <form action="/predict" method="POST">
+            <textarea name="message" placeholder="Enter your message..."></textarea><br>
+            <button type="submit">Know Sentiment</button>
+
     <div class="container">
         <h1>Enter Your Message</h1>
         <form action="#" method="post">
             <textarea name="message" placeholder="Type your message here..."></textarea>
             <br>
             <button type="submit" class="btn">Know Sentiment</button>
+ main
         </form>
     </div>
 </body>
