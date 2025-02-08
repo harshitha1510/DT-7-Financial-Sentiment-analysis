@@ -80,7 +80,13 @@
 <body>
     <div class="container">
         <h1>Financial Sentiment Analysis</h1>
-        <button class="predict-btn">Predict</button>
+        <button class="predict-btn" onclick="redirectToPredict()">Predict</button>
     </div>
+
+    <script>
+        function redirectToPredict() {
+            window.location.href = window.location.origin + "/predict";
+        }
+    </script>
 </body>
 </html>
