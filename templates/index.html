@@ -3,18 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- SAI-YASHWANTH
-    <title>Financial Sentiment Analysis</title>
+    <title>FinSentiment - Financial Mood Analysis</title>
     <style>
-        /* General body styling */
-        body, html {
+        * {
             margin: 0;
             padding: 0;
-            height: 100%;
-            overflow: hidden;
-            font-family: 'Arial', sans-serif;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
         }
-
         /* Live background animation */
         body {
             background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
@@ -29,16 +25,16 @@
         }
 
         /* Centering the title and button */
-        .container {
+        .container 
 
-    <title>FinSentiment - Financial Mood Analysis</title>
-    <style>
-        * {
+        <title> FinSentiment - Financial Mood Analysis </title>
+    <style> {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            box-sizing : border-box;
             font-family: 'Segoe UI', sans-serif;
         }
+        
 
         body {
             min-height: 100vh;
@@ -66,14 +62,13 @@
             z-index: 1;
             color: white;
             text-align: center;
- main
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
- SAI-YASHWANTH
             height: 100vh;
         }
+
 
         /* Title styling */
         h1 {
@@ -113,10 +108,7 @@
         @keyframes slideUp {
             from { transform: translateY(20px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
-
-            min-height: 100vh;
-            width: 100%;
-            padding: 2rem;
+            
         }
 
         h1 {
@@ -216,21 +208,17 @@
         @keyframes float {
             0% { transform: translateY(100vh) rotate(0deg); }
             100% { transform: translateY(-100vh) rotate(360deg); }
- main
         }
+        
+        
     </style>
 </head>
 <body>
- SAI-YASHWANTH
-    <div class="container">
-        <h1>Financial Sentiment Analysis</h1>
-        <button class="predict-btn" onclick="redirectToPredict()">Predict</button>
-    </div>
-
     <script>
         function redirectToPredict() {
             window.location.href = window.location.origin + "/predict";
-
+        }
+        </script>
     <div class="background"></div>
     <div class="floating-elements">
         <!-- Add financial-related floating elements -->
@@ -242,10 +230,10 @@
     </div>
     <div class="container">
         <h1>Financial Sentiment Analysis</h1>
+        <button class="predict-btn" onclick="redirectToPredict()">Predict</button>
         <p class="subtitle">Decoding Market Emotions Through Advanced Analysis</p>
         <a href="/predict" class="analyze-btn">Analyze Market Sentiment</a>
     </div>
-
     <script>
         function startAnalysis() {
             alert('Analysis feature coming soon!');
@@ -256,7 +244,6 @@
                 btn.style.transform = 'scale(1)';
             }, 200);
         }
-
         // Add dynamic floating elements
         document.addEventListener('DOMContentLoaded', () => {
             const container = document.querySelector('.floating-elements');
@@ -272,7 +259,6 @@
                 container.appendChild(element);
             }
         });
-
         // Parallax effect
         document.addEventListener('mousemove', (e) => {
             const x = e.clientX / window.innerWidth;
@@ -282,12 +268,6 @@
                 `translate(-${x * 30}px, -${y * 30}px)`;
         });
     </script>
-    <script>
-        function predictSentiment() {
-            alert("Redirecting to Sentiment Prediction...");
-            window.location.href = "/predict";
- main
-        }
-    </script>
+
 </body>
 </html>
